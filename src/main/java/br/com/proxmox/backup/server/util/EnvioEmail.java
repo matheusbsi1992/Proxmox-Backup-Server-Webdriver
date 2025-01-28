@@ -24,12 +24,12 @@ public class EnvioEmail {
         // Configurações do servidor SMTP
         String host =       "smtp.gmail.com";
         String port =       "465";
-        String username =   "tiahssergipe@gmail.com";
-        String password =   "jtfe jmcs rfuk pqcc";
+        String username =   "meu email";
+        String password =   "meu pasword";
 
         // Informações do email
-        String fromEmail =   "tiahssergipe@gmail.com";
-        String toEmail  =    "ti@ahs.org.br";
+        String fromEmail =   "meu email";
+        String toEmail  =    "envio para email especifico";
         String subject  =    "Backup Status (server.ahs): backup successful";
         String body     =    "Imagens de gerenciamento do Backup (server.ahs) \n";
 
