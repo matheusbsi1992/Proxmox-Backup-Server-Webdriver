@@ -1,9 +1,9 @@
-Proxmox Backup Server WebDriver
+# Proxmox Backup Server WebDriver
 
 Este projeto é uma aplicação Java que utiliza o Selenium WebDriver para automatizar interações com o Proxmox Backup Server. Ele também inclui dependências para manipulação de arquivos (commons-io) 
 e envio de e-mails (javax.mail).
 
-Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
     Java JDK 22: O projeto é compilado e executado com JDK 22.
 
@@ -13,7 +13,7 @@ Tecnologias Utilizadas
 
     JavaMail API (v1.6.2): Para envio de e-mails.
 
-Estrutura do Projeto
+# Estrutura do Projeto
 
 O projeto é gerenciado pelo Maven e inclui os seguintes plugins:
 
@@ -23,7 +23,8 @@ O projeto é gerenciado pelo Maven e inclui os seguintes plugins:
 
     maven-compiler-plugin: Para garantir a compilação com JDK 22.
 
-Como Executar o Projeto
+# Como Executar o Projeto
+
 Pré-requisitos
 
     JDK 22 instalado.
@@ -56,10 +57,11 @@ Passos para Execução
 
     java -jar target/proxmox-backup-server-webdriver-1.0.jar
 
-Configuração
+# Configuração
 
 Certifique-se de que o arquivo pom.xml está configurado corretamente com as dependências necessárias. A classe principal do projeto é br.com.proxmox.backup.server.executavel.Executavel.
-Contribuição
+
+# Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 Licença
