@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.proxmox.backup.server</groupId>
+    <artifactId>proxmox-backup-server-webdriver</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.25.0</version>            
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>            
+        </dependency>
+
+        <!--<dependency>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
+            <version>2.1.2</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>            
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    
+    <build>
+        <plugins>
+            <!-- Plugin para gerar com dependencias encapsuladas -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Plugin para gerar o JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>br.com.proxmox.backup.server.executavel.Executavel</mainClass>
+                            <packageName>br.com.proxmox.backup.server</packageName>
+                        </manifest>
+                        <manifestEntries>
+                            <Created-By>matheusbsi1992@gmail.com</Created-By>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para compilar com JDK 22 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>22</source>
+                    <target>22</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+  
+
+
+</project>
