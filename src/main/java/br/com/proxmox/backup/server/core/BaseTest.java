@@ -52,7 +52,7 @@ public class BaseTest {
     public static void envioDeArquivosPorEmail(){
            enviarEmailComAnexo(arquivosExistentes);
            if(!arquivosExistentes.isEmpty()){
-                arquivosExistentes = null;
+               arquivosExistentes = null;
            }
     }
 
