@@ -20,8 +20,11 @@ public class AcessoComunicacao {
     private static ChromeOptions opcaoDriverChrome() {
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBrowserVersion("127");         
-        chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+        //chromeOptions.setBrowserVersion("128");
+        chromeOptions.setBrowserVersion("135");
+        //-- chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+        chromeOptions.addArguments("--headless=new"); // process in Background (new 17-06-2025)
+        chromeOptions.addArguments("--window-size=1920,1080"); // open Browser in resolution (1920x1080 px) (new 17-06-2025)
         chromeOptions.addArguments("disable-infobars"); // disabling infobars
         chromeOptions.addArguments("--disable-extensions"); // disabling extensions
         chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
@@ -62,10 +65,10 @@ public class AcessoComunicacao {
         if (Propriedades.tipodeExecucao == Propriedades.TipoExecucao.LOCAL) {
             if (webDriver == null) {
                 switch (Propriedades.browser) {
+                    case FIREFOX:
+                        webDriver = new FirefoxDriver();                        
                     case CHROME:
                         webDriver = new ChromeDriver(opcaoDriverChrome());
-                    //case FIREFOX:
-                      //  webDriver = new FirefoxDriver();
                 }
             }
             //webDriver.manage().window().setSize(new Dimension(1200,1200));
