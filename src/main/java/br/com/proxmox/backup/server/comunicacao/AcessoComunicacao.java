@@ -22,7 +22,7 @@ public class AcessoComunicacao {
         ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.setBrowserVersion("128");
         chromeOptions.setBrowserVersion("135");
-        //-- chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+        //-- chromeOptions.addArguments("start-maximized");// open Browser in maximized mode
         chromeOptions.addArguments("--headless=new"); // process in Background (new 17-06-2025)
         chromeOptions.addArguments("--window-size=1920,1080"); // open Browser in resolution (1920x1080 px) (new 17-06-2025)
         chromeOptions.addArguments("disable-infobars"); // disabling infobars
