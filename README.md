@@ -7,7 +7,7 @@ e envio de e-mails (javax.mail).
 
     Java JDK 22: O projeto é compilado e executado com JDK 22.
 
-    Selenium WebDriver (v4.25.0): Para automação de navegadores.
+    Selenium WebDriver (v4.33.0): Para automação de navegadores.
 
     Apache Commons IO (v2.16.1): Para manipulação de arquivos e diretórios.
 
